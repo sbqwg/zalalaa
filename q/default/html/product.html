@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="renderer" content="webkit">
+<title>{pboot:pagetitle}</title>
+<meta name="keywords" content="{pboot:pagekeywords}">
+<meta name="description" content="{pboot:pagedescription}">
+<meta name="theme-color" content="#32CD32">
+<meta property="og:type" content="product"/>
+<meta property="og:release_date" content="{content:date}"/>
+<meta property="og:title" content="{content:title}"/>
+<meta property="og:description" content="{content:description}"/>
+<meta property="og:product:price" content="{content:ext_price}"/>
+<link rel="stylesheet" href="/q/p.min.css">
+<link rel="stylesheet" href="/q/p.css">
+<script src="/q/j.min.js"></script>
+<script src="/q/pj.min.js"></script>
+</head>
+<body>
+{include file=dt.html}
+
+<div class="layout grid-middle big-grid-middle large-grid-large isplit-full scrollto">
+  <h1 class="margin-bottom weight" align="center">{content:title}</h1>
+  <p align="center">{content:subtitle}</p>
+    <p align="center"><span class="text-danger size-large">&#9733;</span>
+    <span class="text-danger size-large">&#9733;</span>
+    <span class="text-danger size-large">&#9733;</span>
+    <span class="text-danger size-large">&#9733;</span>
+    <span class="text-danger size-large">&#9733;</span></p>
+  
+  <ul class="bread">
+     {pboot:position indexicon=icon-home separatoricon='icon-arrow-right'} <i class="icon-arrow-right"></i> <a href="{content:link}">{content:title}</a>
+     </ul> 
+    <div class="grid big-grid-middle large-grid-large isplit-content">
+    <div class="big-x4">
+      <a class="padding block text-white discovers-main" href=" ">
+        <div class="overflow-hidden margin-bottom relative effect-hover">
+          <figure class="figure figure-above radius-big">
+              <img loading="lazy" src="{content:ico}" alt="{content:title}" class="img-auto scale" /></figure>
+          <div class="effect-content"><i class="icon-add text-main"></i></div>
+        </div>
+        <strong class="weight-small">{content:title} <sup class="badge">{content:ext_price}</sup></strong>
+        <p class="size-small">{content:subtitle}</p>
+      </a>
+    </div>
+    <div class="big-x8">
+	<h3 class="margin-bottom weight" align="center">{content:title}<sup class="badge">$:{content:ext_price}</sup></h3>
+	
+        <time>{content:date style=Y-m-d}</time>
+  {content:content}
+  </div> 
+  </div>
+  
+  
+  <div class="grid big-grid-middle large-grid-large isplit-content">
+
+    <div class="big-x12 grid discovers">{pboot:pics num=10 id={content:id}}
+      <a class="big-x4 flex flex-column" href="[pics:src]">
+        <div class="overflow-hidden margin-bottom relative effect-hover">
+          <figure class="figure figure-above radius-big"><img loading="lazy" src="[pics:src]" alt="{content:sortname}" class="img-auto scale" /></figure>
+          <div class="effect-content"><i class="icon-add text-main"></i></div>
+        </div>
+        <p class="flex-grow">[pics:title]</p>
+      </a>{/pboot:pics}
+    </div>
+  </div>
+<p>上一个：<a href="{content:prelink}">{content:pretitle notext=' '}</a></p>
+<p>下一个：<a href="{content:nextlink}">{content:nexttitle notext=' '}</a></p>
+</div>
+
+{include file=foot.html}
