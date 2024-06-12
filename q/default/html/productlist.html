@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="renderer" content="webkit">
+<title>{pboot:pagetitle}</title>
+<meta name="keywords" content="{pboot:pagekeywords}">
+<meta name="description" content="{pboot:pagedescription}">
+<meta name="theme-color" content="#32CD32">
+<link rel="stylesheet" href="/q/p.min.css">
+<link rel="stylesheet" href="/q/p.css">
+<script src="/q/j.min.js"></script>
+<script src="/q/pj.min.js"></script>
+</head>
+<body>
+{include file=dt.html}
+<div class="layout grid-middle big-grid-middle large-grid-large isplit-full scrollto">
+    <div class="grid">
+       {pboot:nav num=18 parent=5}<div class="big-x2 small-x6"><a href="[nav:link]" title="[nav:name]">[nav:name] <span class="badge">[nav:rows]</span></a></div> {/pboot:nav}
+    </div>
+</div>
+<div class="layout grid-middle big-grid-middle large-grid-large isplit-full scrollto">
+  <h3 class="margin-bottom-mini weight" align="center">{sort:name}</h3>
+  <div class="grid big-grid-middle large-grid-large isplit-content">
+    <div class="big-x12 grid discovers">{pboot:list num=24 order=isrecommend}
+      <a class="big-x3 flex flex-column" href="[list:link]" title="[list:title],[list:date]">
+        <div class="overflow-hidden margin-bottom relative effect-hover">
+          <figure class="figure figure-above radius-big"><img src="[list:ico]"  alt="[list:title]" class="img-auto scale" /> </figure>
+          <div class="effect-content"><i class="icon-add text-main"></i></div>
+        </div>
+        <strong class="weight-small">[list:title len=26]<sup class="badge">$:[list:ext_price]</sup></strong>
+        <p class="size-small flex-grow">[list:content drophtml=1 dropblank=1 len=60] <br />Read More</p>
+      </a>{/pboot:list}
+    </div>
+  </div>{pboot:if({page:rows}>0)}
+    <ul class="nav nav-page nav-divider">
+      <li><a href="{page:pre}">Previous</a></li>
+      <li><a href="{page:next}">Next</a></li>
+    </ul>
+{else}
+   	<div>No data found!</div>
+{/pboot:if}  
+</div>
+
+{include file=foot.html}
