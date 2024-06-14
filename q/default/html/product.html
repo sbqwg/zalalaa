@@ -42,16 +42,16 @@
               <img loading="lazy" src="{content:ico}" alt="{content:title}" class="img-auto scale" /></figure>
           <div class="effect-content"><i class="icon-add text-main"></i></div>
         </div>
-        <strong class="weight-small">{content:title} <sup class="badge">{content:ext_price}</sup></strong>
+        <strong class="weight-small">{content:title}</strong>
         <p class="size-small">{content:subtitle}</p>
       </a>
 	 
     </div>
     <div class="big-x8">
-	<h3 class="margin-bottom weight" align="center">{content:title}<sup class="badge">$:{content:ext_price}</sup></h3>
+	<h3 class="margin-bottom weight" align="center">{content:title}<sup class="badge"><$:{content:ext_price}</sup></h3>
         <time>{content:date style=Y-m-d}</time>
 		<p>Number: A{content:id}</p> 
-		<p><a class="padding block" href="{content:ext_paypal}" target="_blank"> <img src="{label:paypal}" alt="{content:title}" /> Buy Now</a></p>
+		<p><a class="padding block" href="{content:ext_paypal}" target="_blank"> <img src="{label:paypal}" alt="{content:title}" /> Buy Now <span class="text-danger">&#36;</span>:{content:ext_price}</sup></a></p>
   {content:content}
   </div> 
   </div>

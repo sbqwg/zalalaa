@@ -20,14 +20,14 @@
   <div class="flip-body">
     <a class="flip-item align-center" href="{label:url1}">
       <picture>
-        <source media="(max-width: 1279px)" srcset="/q/b1.webp">
+        <source media="(max-width: 1279px)" srcset="/q/b1ss.webp">
         <source media="(min-width: 1280px)" srcset="/q/b1.webp">
         <img src="/q/b1.webp" class="img-auto" alt="zalalaa" />
       </picture>
     </a>
 	    <a class="flip-item align-center" href="{label:url1}">
       <picture>
-        <source media="(max-width: 1279px)" srcset="/q/b2.webp">
+        <source media="(max-width: 1279px)" srcset="/q/b2ss.webp">
         <source media="(min-width: 1280px)" srcset="/q/b2.webp">
         <img src="/q/b2.webp" class="img-auto" alt="zalalaa" />
       </picture>
@@ -47,29 +47,39 @@
     });
   });
 </script>
-<div class="layout grid-middle big-grid-middle large-grid-large isplit-full scrollto">
+
+<div class="layout grid-middle big-grid-middle large-grid-large bg isplit-full scrollto">
   <h3 class="margin-bottom-mini weight" align="center">About</h3>
-  <p align="center"> Appliques & Decorative Patches</p>
-<p align="center">Zalalaa Committed to garment accessories lace design, production and sales. The main products are: water soluble (milk silk, polyester light, cotton embroidery fabric and lace), bead embroidery, towel embroidery, chiffon, lace, etc.Fashion and high quality lace make customers extraordinary.</p>
-  <div class="grid big-grid-middle large-grid-large isplit-content">
+     <p align="center"> Appliques & Decorative Patches</p>
+<p align="text-gray size-mini">Zalalaa Committed to garment accessories lace design, production and sales. The main products are: water soluble (milk silk, polyester light, cotton embroidery fabric and lace), bead embroidery, towel embroidery, chiffon, lace, etc.Fashion and high quality lace make customers extraordinary.</p>
+    <div class="grid big-grid-middle large-grid-large isplit-content">
+
     <div class="big-x12 grid discovers">{pboot:list scode=5 num=8 order=isrecommend}
       <a class="big-x3 flex flex-column" href="[list:link]" title="[list:title],[list:date]">
         <div class="overflow-hidden margin-bottom relative effect-hover">
-          <figure class="figure figure-above radius-big">
-              <img loading="lazy" src="[list:ico]" width=460 height=300 alt="[list:title]" class="img-auto scale" /> </figure>
+          <figure class="figure figure-above radius-big"><img loading="lazy" src="[list:ico]" alt="[list:title],[list:date]" class="img-auto scale" /></figure>
           <div class="effect-content"><i class="icon-add text-main"></i></div>
         </div>
-        <strong>[list:title]<sup class="badge">$:[list:ext_price]</sup> Read More </strong>
-		
+		<strong class="weight-small"><span class="text-danger">&#36;</span>:[list:ext_price]</strong>
+        <p class="flex-grow">[list:title  len=30]<br /><span class="text-main">Read More</span></p>
       </a>{/pboot:list}
     </div>
   </div>
+  
+  
+
+  
 </div>
+
+
+
+
+
 <div class="layout grid-large isplit scrollto"> 
   <div class="grid documents">{pboot:list scode=2 num=12 order=date}
-    <a class="big-x4" href=".[list:link]" title="[list:title],[list:date]">
+    <a class="big-x4" href="[list:link]" title="[list:title],[list:date]">
       <strong>[list:title lencn=30]</strong>
-      <p>[list:content drophtml=1 dropblank=1 len=68] <sup>[list:date style=Y-m-d]</sup>Read More</p>
+      <p>[list:content drophtml=1 dropblank=1 len=68] <sup>[list:date style=Y-m-d]</sup><br />Read More</p>
     </a>{/pboot:list}
   </div>
 </div>
@@ -78,8 +88,9 @@
   <p align="center"> </p>
   <div class="grid documents">{pboot:list scode=8 num=36 order=date}
     <a class="big-x4" href="[list:link]" title="[list:title],[list:date]">
-      <strong>[list:title lencn=36]<sup>[list:date  style=Y-m-d]</sup>Read More</strong>
+      <strong>[list:title lencn=36]<sup>[list:date  style=Y-m-d]</sup><br />Read More</strong>
     </a>{/pboot:list}
   </div>
 </div>
+
 {include file=foot.html}
