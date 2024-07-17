@@ -1,0 +1,14 @@
+{include file=h.html}
+<main class="index">
+<p><a href="/index.html"> Home</a> >> <a href="{content:sortlink}index.html">{content:sortname}</a></p>
+<h1>{content:title}</h1>
+<time>{content:date style=Y-m-d}</time>
+ <div class="grid">
+<img src="{label:cdn}{content:ico}" alt="[content::title],[content::date]">
+  {content:content}
+  {pboot:pics num=20 id={content:id}}<p><a href="[pics:src]"><img src="{label:cdn}[pics:src]" alt="{content:sortname}"/></a></p><p>[pics:title]</p>{/pboot:pics} 
+</div>
+
+{include file=foot2.html}
+</main>
+{include file=foot.html}

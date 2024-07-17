@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="renderer" content="webkit">
+<title>{pboot:pagetitle}</title>
+<meta name="keywords" content="{pboot:pagekeywords}">
+<meta name="description" content="{pboot:pagedescription}">
+<meta name="theme-color" content="#32CD32">
+{include file=dt1.html}
+</head>
+<body>
+{include file=dt.html}
+<div class="flip" id="flip">
+  <div class="flip-body">
+    <a class="flip-item align-center" href="{label:url1}">
+      <picture>
+        <source media="(max-width: 1279px)" srcset="{label:cdn}/q/b1ss.webp">
+        <source media="(min-width: 1280px)" srcset="{label:cdn}/q/b1.webp">
+        <img src="{label:cdn}{label:cdn}/q/b1.webp" class="img-auto" alt="zalalaa" />
+      </picture>
+    </a>
+	    <a class="flip-item align-center" href="{label:url1}">
+      <picture>
+        <source media="(max-width: 1279px)" srcset="{label:cdn}/q/b2ss.webp">
+        <source media="(min-width: 1280px)" srcset="{label:cdn}/q/b2.webp">
+        <img src="{label:cdn}/q/b2.webp" class="img-auto" alt="zalalaa" />
+      </picture>
+    </a>
+  </div>
+  <div class="flip-prev text-white" id="flip-prev"></div>
+  <div class="flip-next text-white" id="flip-next"></div>
+</div>
+<script>
+  $(function(){
+    $('#flip').flip({
+      "autoplay":true,
+      "page":true,
+      "prev":"#flip-prev",
+      "next":"#flip-next",
+      "toggle":{"class":"nav nav-turn nav-turn-dot nav-turn-line","active":"active text-warning"}
+    });
+  });
+</script>
+<div class="layout grid-middle big-grid-middle large-grid-large bg isplit-full scrollto">
+  <h3 class="margin-bottom-mini weight" align="center">About</h3>
+     <p align="center"> Appliques & Decorative Patches</p>
+<p align="text-gray size-mini">Zalalaa Committed to garment accessories lace design, production and sales. The main products are: water soluble (milk silk, polyester light, cotton embroidery fabric and lace), bead embroidery, towel embroidery, chiffon, lace, etc.Fashion and high quality lace make customers extraordinary.</p>
+    <div class="grid big-grid-middle large-grid-large isplit-content">
+    <div class="big-x12 grid discovers">{pboot:list scode=5 num=16 order=isrecommend}
+      <a class="big-x3 flex flex-column" href="[list:link]" title="[list:title],[list:date]">
+        <div class="overflow-hidden margin-bottom relative effect-hover">
+          <figure class="figure figure-above radius-big"><img loading="lazy" src="{label:cdn}[list:ico]" alt="[list:title],[list:date]" class="img-auto scale" /></figure>
+          <div class="effect-content"><i class="icon-add text-main"></i></div>
+        </div>
+		<strong class="weight-small"><span class="text-danger">&#36;</span>:[list:ext_price]</strong>
+        <p class="flex-grow">[list:title  len=30]<br /><span class="text-main">Read More</span></p>
+      </a>{/pboot:list}
+    </div>
+  </div>
+</div>
+<div class="layout grid-large isplit scrollto">
+<h3 align="center">New </h3>
+  <div class="grid documents">{pboot:list scode=2 num=12 order=date}
+    <a class="big-x4" href="[list:link]" title="[list:title],[list:date]">
+      <strong>[list:title lencn=30]</strong>
+      <p>[list:content drophtml=1 dropblank=1 len=68] <sup>[list:date style=Y-m-d]</sup><br />Read More</p>
+    </a>{/pboot:list}
+  </div>
+</div>
+<div class="layout grid-large isplit scrollto">
+    <h3 align="center">Help</h3>
+  <p align="center"> </p>
+  <div class="grid documents">{pboot:list scode=8 num=36 order=date}
+    <a class="big-x4" href="[list:link]" title="[list:title],[list:date]">
+      <strong>[list:title lencn=36]<sup>[list:date  style=Y-m-d]</sup><br />Read More</strong>
+    </a>{/pboot:list}
+  </div>
+</div>
+{include file=foot.html}

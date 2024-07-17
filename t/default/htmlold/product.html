@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="renderer" content="webkit">
+<title>{pboot:pagetitle}</title>
+<meta name="description" content="{pboot:pagedescription}">
+<meta name="theme-color" content="#32CD32">
+<meta property="og:type" content="product"/>
+<meta property="og:release_date" content="{content:date}"/>
+<meta property="og:title" content="{content:title}"/>
+<meta property="og:description" content="{content:description}"/>
+<meta property="og:product:price" content="{content:ext_price}"/>
+{include file=dt1.html}
+</head>
+<body>
+{include file=dt.html}
+<div class="layout grid-middle big-grid-middle large-grid-large isplit-full scrollto">
+  <h1 class="margin-bottom weight" align="center">{content:title}</h1>
+  <p align="center">{content:subtitle}</p>
+    <p align="center"><span class="text-danger size-large">&#9733;</span>
+    <span class="text-danger size-large">&#9733;</span>
+    <span class="text-danger size-large">&#9733;</span>
+    <span class="text-danger size-large">&#9733;</span>
+    <span class="text-danger size-large">&#9733;</span></p>
+  <ul class="bread">
+    <a href="/index.html"><i class="icon-home"></i></a> <i class="icon-arrow-right"></i> <a href="/q/patches/index.html">Applique Patches</a> <i class="icon-arrow-right"></i> <a href="{content:sortlink}index.html">{content:sortname}</a> <i class="icon-arrow-right"></i> <a href="{content:link}">{content:title}</a>
+     </ul> 
+    <div class="grid big-grid-middle large-grid-large isplit-content">
+    <div class="big-x4">
+      <a class="padding block text-white discovers-main" href=" ">
+        <div class="overflow-hidden margin-bottom relative effect-hover">
+          <figure class="figure figure-above radius-big">
+              <img loading="lazy" src="{label:cdn}{content:ico}" alt="{content:title}" class="img-auto scale" /></figure>
+          <div class="effect-content"><i class="icon-add text-main"></i></div>
+        </div>
+        <strong class="weight-small">S/N: A{content:id}</strong>
+        <p class="size-small">{content:subtitle}</p>
+      </a>
+    </div>
+    <div class="big-x8">
+	<h3 class="margin-bottom weight" align="center">{content:title}<sup class="badge">$:{content:ext_price}</sup></h3>
+        <time>{content:date style=Y-m-d}</time>
+	<div class="grid">S/N: A{content:id} <a class="padding block" href="{content:ext_paypal}" target="_blank"> <img src="{label:cdn}{label:paypal}" alt="{content:title}" /> Buy Now <span class="text-danger">&#36;</span>:{content:ext_price}</sup></a>
+    </div>
+  {content:content}
+  </div> 
+  </div>
+  <div class="grid big-grid-middle large-grid-large isplit-content">
+    <div class="big-x12 grid discovers">{pboot:pics num=50 id={content:id}}
+      <a class="big-x6 flex flex-column" href="{label:cdn}[pics:src]" alt="{content:title}" >
+        <div class="overflow-hidden margin-bottom relative effect-hover">
+          <figure class="figure figure-above radius-big"><img loading="lazy" src="{label:cdn}[pics:src]" alt="{content:title}" class="img-auto scale" /></figure>
+          <div class="effect-content"><i class="icon-add text-main"></i></div>
+        </div>
+        <p class="flex-grow">[pics:title]</p>
+      </a>{/pboot:pics}
+    </div>
+  </div>
+<p>Previous: {content:precontent}</p>
+<p>Next: {content:nextcontent  notext='no more'}</p>
+</div>
+<div class="grid-middle">
+      <div class="grid">{pboot:list scode=5 order='date desc,id desc' num=12}
+        <div class="small-x2">
+          <div class="card">
+            <a href="[list:link]" title="[list:title],[list:date]"><img loading="lazy" src="{label:cdn}[list:ico]" class="card-media card-overflow radius-big" /></a>
+          </div>
+        </div>{/pboot:list}
+      </div>
+</div>
+{include file=foot.html}
